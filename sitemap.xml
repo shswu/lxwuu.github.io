@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://lxwu.me/about/index.html</loc>
+    
+    <lastmod>2019-01-01T07:11:25.685Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://lxwu.me/private/index.html</loc>
     
     <lastmod>2018-09-14T10:12:01.769Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://lxwu.me/links/index.html</loc>
     
     <lastmod>2018-05-25T07:01:25.998Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://lxwu.me/about/index.html</loc>
-    
-    <lastmod>2018-05-25T07:01:22.731Z</lastmod>
     
   </url>
   
