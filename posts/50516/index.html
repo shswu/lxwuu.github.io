@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="今天将 lxwu.me 启用了 HTTPS 访问，由于签发的证书需要独立的 VPS 存储（我用的 Linode ），所以要将域名解析添加一条 A 记录，记录值为 VPS 的 ip 地址，最后再通过反向代理（我用的 Nginx ）指向到 GitHub Page 的二级域名。 网站如何启用 HTTPS 访问可以参考《如何免费的让网站启用HTTPS》 Nginx 反向代理配置可以参考我的配置文件 ser">
+    <meta name="description" content="今天将 lxwu.me 启用了 HTTPS 访问，由于签发的证书需要独立的 VPS 存储（我用的 Linode ），所以要将域名解析添加一条 A 记录，记录值为 VPS 的 ip 地址，最后再通过反向代理（我用的 Nginx ）指向到 GitHub Page 的二级域名。 网站如何启用 HTTPS 访问可以参考《如何免费的让网站启用HTTPS》Nginx 反向代理配置可以参考我的配置文件 serv">
 <meta name="keywords" content="https,nginx,website">
 <meta property="og:type" content="article">
 <meta property="og:title" content="利用反向代理将启用 HTTPS 的域名指向到 GitHub Page 的二级域名">
 <meta property="og:url" content="http://lxwu.me/posts/50516/index.html">
 <meta property="og:site_name" content="Pissy ca-ca">
-<meta property="og:description" content="今天将 lxwu.me 启用了 HTTPS 访问，由于签发的证书需要独立的 VPS 存储（我用的 Linode ），所以要将域名解析添加一条 A 记录，记录值为 VPS 的 ip 地址，最后再通过反向代理（我用的 Nginx ）指向到 GitHub Page 的二级域名。 网站如何启用 HTTPS 访问可以参考《如何免费的让网站启用HTTPS》 Nginx 反向代理配置可以参考我的配置文件 ser">
+<meta property="og:description" content="今天将 lxwu.me 启用了 HTTPS 访问，由于签发的证书需要独立的 VPS 存储（我用的 Linode ），所以要将域名解析添加一条 A 记录，记录值为 VPS 的 ip 地址，最后再通过反向代理（我用的 Nginx ）指向到 GitHub Page 的二级域名。 网站如何启用 HTTPS 访问可以参考《如何免费的让网站启用HTTPS》Nginx 反向代理配置可以参考我的配置文件 serv">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-01-08T07:14:31.673Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用反向代理将启用 HTTPS 的域名指向到 GitHub Page 的二级域名">
-<meta name="twitter:description" content="今天将 lxwu.me 启用了 HTTPS 访问，由于签发的证书需要独立的 VPS 存储（我用的 Linode ），所以要将域名解析添加一条 A 记录，记录值为 VPS 的 ip 地址，最后再通过反向代理（我用的 Nginx ）指向到 GitHub Page 的二级域名。 网站如何启用 HTTPS 访问可以参考《如何免费的让网站启用HTTPS》 Nginx 反向代理配置可以参考我的配置文件 ser">
+<meta name="twitter:description" content="今天将 lxwu.me 启用了 HTTPS 访问，由于签发的证书需要独立的 VPS 存储（我用的 Linode ），所以要将域名解析添加一条 A 记录，记录值为 VPS 的 ip 地址，最后再通过反向代理（我用的 Nginx ）指向到 GitHub Page 的二级域名。 网站如何启用 HTTPS 访问可以参考《如何免费的让网站启用HTTPS》Nginx 反向代理配置可以参考我的配置文件 serv">
     
     
         
@@ -147,9 +147,8 @@
 
   <div class="content" itemprop="articleBody">
     <p>今天将 <strong>lxwu.me</strong> 启用了 HTTPS 访问，由于签发的证书需要独立的 VPS 存储（我用的 Linode ），所以要将域名解析添加一条 A 记录，记录值为 VPS 的 ip 地址，最后再通过反向代理（我用的 Nginx ）指向到 GitHub Page 的二级域名。</p>
-<p>网站如何启用 HTTPS 访问可以参考<a href="https://coolshell.cn/articles/18094.html" target="_blank" rel="noopener">《如何免费的让网站启用HTTPS》</a>
-Nginx 反向代理配置可以参考我的配置文件</p>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    server_name lxwu.me;</span><br><span class="line">    location / &#123;</span><br><span class="line">        proxy_pass https://lxwuu.github.io;</span><br><span class="line">        proxy_redirect off;</span><br><span class="line">        proxy_set_header Host lxwuu.github.io;</span><br><span class="line">        proxy_set_header X-Real-IP <span class="variable">$remote_addr</span>;</span><br><span class="line">        proxy_set_header X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    listen 443 ssl http2; <span class="comment"># managed by Certbot</span></span><br><span class="line">    ssl_certificate /etc/letsencrypt/live/lxwu.me/fullchain.pem; <span class="comment"># managed by Certbot</span></span><br><span class="line">    ssl_certificate_key /etc/letsencrypt/live/lxwu.me/privkey.pem; <span class="comment"># managed by Certbot</span></span><br><span class="line">    include /etc/letsencrypt/options-ssl-nginx.conf; <span class="comment"># managed by Certbot</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$scheme</span> != <span class="string">"https"</span>) &#123;</span><br><span class="line">        <span class="built_in">return</span> 301 https://<span class="variable">$host</span><span class="variable">$request_uri</span>;</span><br><span class="line">    &#125; <span class="comment"># managed by Certbot</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>网站如何启用 HTTPS 访问可以参考<a href="https://coolshell.cn/articles/18094.html" target="_blank" rel="noopener">《如何免费的让网站启用HTTPS》</a><br>Nginx 反向代理配置可以参考我的配置文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    server_name lxwu.me;</span><br><span class="line">    location / &#123;</span><br><span class="line">        proxy_pass https://lxwuu.github.io;</span><br><span class="line">        proxy_redirect off;</span><br><span class="line">        proxy_set_header Host lxwuu.github.io;</span><br><span class="line">        proxy_set_header X-Real-IP <span class="variable">$remote_addr</span>;</span><br><span class="line">        proxy_set_header X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    listen 443 ssl http2; <span class="comment"># managed by Certbot</span></span><br><span class="line">    ssl_certificate /etc/letsencrypt/live/lxwu.me/fullchain.pem; <span class="comment"># managed by Certbot</span></span><br><span class="line">    ssl_certificate_key /etc/letsencrypt/live/lxwu.me/privkey.pem; <span class="comment"># managed by Certbot</span></span><br><span class="line">    include /etc/letsencrypt/options-ssl-nginx.conf; <span class="comment"># managed by Certbot</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$scheme</span> != <span class="string">"https"</span>) &#123;</span><br><span class="line">        <span class="built_in">return</span> 301 https://<span class="variable">$host</span><span class="variable">$request_uri</span>;</span><br><span class="line">    &#125; <span class="comment"># managed by Certbot</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>需要注意的是由于 GitHub 限制，<code>proxy_set_header Host</code>的值不是平常配置反向代理的<code>$host</code>，而是 GitHub Page 的二级域名。</p>
 
   </div>
