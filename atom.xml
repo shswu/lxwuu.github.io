@@ -204,16 +204,18 @@
     <link href="http://lxwu.me/posts/9408/"/>
     <id>http://lxwu.me/posts/9408/</id>
     <published>2017-10-07T18:41:45.000Z</published>
-    <updated>2019-01-08T11:07:03.488Z</updated>
+    <updated>2019-01-16T12:01:46.607Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="nasa-63032.jpg" alt="nasa"></p><p>The world sees criminal lunatics, I see brilliance.</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>The world sees criminal lunatics, I see brilliance.</p></blockquote><p><img src="nasa-63032.jpg" alt="nasa"></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;img src=&quot;nasa-63032.jpg&quot; alt=&quot;nasa&quot;&gt;&lt;/p&gt;
+        &lt;blockquote&gt;
 &lt;p&gt;The world sees criminal lunatics, I see brilliance.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;nasa-63032.jpg&quot; alt=&quot;nasa&quot;&gt;&lt;/p&gt;
 
       
     

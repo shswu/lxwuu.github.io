@@ -578,8 +578,10 @@
     <entry>
       <title><![CDATA[hello-world]]></title>
       <url>/posts/9408/</url>
-      <content type="html"><![CDATA[<p><img src="nasa-63032.jpg" alt="nasa"></p>
+      <content type="html"><![CDATA[<blockquote>
 <p>The world sees criminal lunatics, I see brilliance.</p>
+</blockquote>
+<p><img src="nasa-63032.jpg" alt="nasa"></p>
 ]]></content>
       
         
