@@ -20,11 +20,21 @@
 <p>今年计划阅读的书籍主要集中在计算机科学、产品设计、经济学、哲学和文学五大类别，重点会阅读计算机科学、产品设计、经济学相关书籍，穿插阅读哲学和文学书籍。看似阅读的类别减少了，其实是我将很多类别列入到这五类的子类别中。以下是未来阅读计划的详细目录(会适时调整)：</p>
 <ul>
 <li>计算机科学<ul>
-<li>物理学</li>
+<li>计算机<ul>
+<li style="list-style: none"><input type="checkbox"> 集体智慧编程</li>
+</ul>
+</li>
+<li>物理学<ul>
+<li style="list-style: none"><input type="checkbox"> 四维旅行</li>
+</ul>
+</li>
 <li>数学</li>
 <li>生物学</li>
 <li>心理学</li>
-<li>认知学</li>
+<li>认知学<ul>
+<li style="list-style: none"><input type="checkbox"> 哥德尔、艾舍尔、巴赫</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>产品设计<ul>
@@ -36,13 +46,20 @@
 </li>
 <li>经济学<ul>
 <li>宏观经济学</li>
-<li>围观经济学</li>
+<li>微观经济学</li>
 <li>国际关系</li>
 <li>历史</li>
 </ul>
 </li>
 <li>哲学<ul>
-<li>叔本华</li>
+<li>叔本华<ul>
+<li style="list-style: none"><input type="checkbox"> 叔本华思想随笔</li>
+<li style="list-style: none"><input type="checkbox"> 叔本华美学随笔</li>
+<li style="list-style: none"><input type="checkbox"> 叔本华论道德与自由</li>
+<li style="list-style: none"><input type="checkbox"> 叔本华哲言录</li>
+<li style="list-style: none"><input type="checkbox"> 叔本华哲学随笔</li>
+</ul>
+</li>
 <li>歌德</li>
 <li>尼采</li>
 <li>马克思</li>
@@ -57,21 +74,21 @@
 </ul>
 <p>重点阅读书籍尽量安排在头脑清晰的非碎片时间，每月2～4本，全年24～48本，读书报告6～8篇。</p>
 <ul>
-<li style="list-style: none"><input type="checkbox"> 一月<ul>
+<li>一月<ul>
 <li style="list-style: none"><input type="checkbox"> 四维旅行</li>
 <li style="list-style: none"><input type="checkbox"> 哥德尔、艾舍尔、巴赫</li>
 <li style="list-style: none"><input type="checkbox"> 集体智慧编程</li>
 <li style="list-style: none"><input type="checkbox"> 叔本华思想随笔</li>
 </ul>
 </li>
-<li style="list-style: none"><input type="checkbox"> 二月<ul>
+<li>二月<ul>
 <li style="list-style: none"><input type="checkbox"> 设计原本</li>
 <li style="list-style: none"><input type="checkbox"> 自私的基因</li>
 <li style="list-style: none"><input type="checkbox"> 世界秩序</li>
 <li style="list-style: none"><input type="checkbox"> 三体</li>
 </ul>
 </li>
-<li style="list-style: none"><input type="checkbox"> 三月<ul>
+<li>三月<ul>
 <li style="list-style: none"><input type="checkbox"> 智能时代</li>
 <li style="list-style: none"><input type="checkbox"> 梦的解析</li>
 </ul>
@@ -79,7 +96,7 @@
 </ul>
 <h1 id="观影计划"><a href="#观影计划" class="headerlink" title="观影计划"></a>观影计划</h1><p>尽量安排在周末，每月2～4部，全年24～48部。</p>
 <ul>
-<li style="list-style: none"><input type="checkbox" checked> 一月<ul>
+<li>一月<ul>
 <li style="list-style: none"><input type="checkbox" checked> 红猪</li>
 <li style="list-style: none"><input type="checkbox" checked> 我不是药神</li>
 <li style="list-style: none"><input type="checkbox" checked> 钢的琴</li>
@@ -87,14 +104,14 @@
 <li style="list-style: none"><input type="checkbox" checked> 盗火线</li>
 </ul>
 </li>
-<li style="list-style: none"><input type="checkbox"> 二月<ul>
+<li>二月<ul>
 <li style="list-style: none"><input type="checkbox"> 东京教父</li>
 <li style="list-style: none"><input type="checkbox"> 心迷宫</li>
 <li style="list-style: none"><input type="checkbox"> 傲慢与偏见</li>
 <li style="list-style: none"><input type="checkbox"> 罗马假日</li>
 </ul>
 </li>
-<li style="list-style: none"><input type="checkbox"> 三月<ul>
+<li>三月<ul>
 <li style="list-style: none"><input type="checkbox"> 美丽人生</li>
 <li style="list-style: none"><input type="checkbox"> 飞行家</li>
 <li style="list-style: none"><input type="checkbox"> 真爱至上</li>
@@ -353,9 +370,9 @@
             
             <tag> 年度 </tag>
             
-            <tag> 读书 </tag>
-            
             <tag> 总结 </tag>
+            
+            <tag> 读书 </tag>
             
         </tags>
         
